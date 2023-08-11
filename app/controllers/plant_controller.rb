@@ -1,4 +1,5 @@
 class PlantsController < ApplicationController
+  before_action :set_plant, only: [:show]
     def index
       plants = Plant.all
       render json: plants
